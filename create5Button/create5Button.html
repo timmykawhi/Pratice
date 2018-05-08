@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Create 5 Button</title>
+    <script type="text/javascript" src="JQuery\jquery.min.js"></script>
+    <script>
+    function createButton(n, className) {
+        // var btContainer = document.createElement("div");
+        // btContainer.className = className || "bt"
+        // n = n || 5;
+        // for (var i = 0; i < n; i++) {
+        //     var button = document.createElement("input");
+        //     button.type = "button";
+        //     button.value = "Button " + i
+        //     btContainer.appendChild(button);
+        // };
+        // document.body.appendChild(btContainer);
+
+        var btContainer = $("<div/><button>").attr({
+            "class": className || "bt"
+        }).appendTo("body");
+        n = n || 5;
+        for (var i = 0; i < n; i++) {
+            $("<input>").attr({
+                type: "button",
+                value: "Button " + i
+            }).appendTo(btContainer);
+        }
+
+    }
+
+    function bindEvent(className) {
+        var className = className || "bt";
+
+        // var btContainer = document.getElementsByClassName(className)[0];
+        // btContainer.addEventListener("click", function(e) {
+        //     var target = e.target;
+        //     if (target.type !== "button") {
+        //         return;
+        //     };
+        //     var value = target.value;
+        //     var number = value.slice(-1);
+        //     console.log(number);
+        // });
+
+
+        $("input").bind("click", function(e) {
+            var target = e.target;
+            var value = $(this).val();
+            var number = value.slice(-1);
+            console.log(number);
+        });
+    }
+    </script>
+</head>
+
+<body>
+</body>
+<script>
+createButton(10);
+bindEvent();
+</script>
+
+</html>

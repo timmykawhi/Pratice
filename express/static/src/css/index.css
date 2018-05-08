@@ -1,0 +1,82 @@
+.tk-header,
+.tk-content,
+.tk-bottom {
+    position: relative;
+    border: 1px solid black;
+    margin: 0px 0px 10px 0px;
+}
+
+.tk-header,
+.tk-bottom {
+    width: 100%;
+    height: 50px;
+}
+
+.tk-content {
+    display: none;
+    width: 100%;
+    height: 700px;
+}
+
+.tk-content-left {
+    position: absolute;
+    left: 0;
+    background-color: aqua;
+    height: 100%;
+    width: 20%;
+}
+
+.tk-content-right {
+    position: absolute;
+    right: 0px;
+    background-color: rgb(0, 47, 255);
+    height: 100%;
+    width: 20%;
+}
+
+.tk-content-center {
+    position: absolute;
+    left: 20%;
+    background-color: rgb(145, 9, 9);
+    height: 100%;
+    width: 60%;
+}
+
+.tk-header-title {
+    position: absolute;
+    height: 80%;
+    top: 10px;
+    left: 10px;
+}
+
+.tk-header-setting {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -20px 0 0 -50px;
+    width: 100px;
+    height: 40%;
+    /* bottom: 50%; */
+    /* text-align: center; */
+}
+
+.tk-header-setting button {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    float: right;
+    border: 1px solid skyblue;
+    padding: .3em .8em;
+    font-size: 125%;
+    line-height: 1.5;
+    border-radius: .2em;
+    background: #58a linear-gradient(hsla(0, 0%, 100%, .2), transparent);
+    color: white;
+    box-shadow: 0 0.05em 0.05em gray;
+    text-shadow: 0 -0.05em 0.05em #335166;
+}
+
+hr {
+    height: .5em;
+    background: currentColor;
+}
