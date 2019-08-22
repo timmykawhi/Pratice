@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="kawhiNation">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./angular.js"></script>
+    <link rel="stylesheet" href="./bootstrap.css">
+    <link rel="stylesheet" href="./bootstrap-theme.css">
+    <script>
+        angular.module('kawhiNation', ['customFilter'])
+    </script>
+    <script src="./controllers/kawhiNation.js"></script>
+    <script src="./filters/costumFilter.js"></script>
+    <script src="./controllers/productListController.js"></script>
+    <title>Kawhi Nation</title>
+    <style>
+        /* .products {
+            margin-right: 15px;
+        } */
+    </style>
+</head>
+
+<body data-ng-controller="kawhiNationCrtl">
+    <div class="kawhi--header navbar navbar-inverse">
+        <a class="navbar-brand" href="#">Kawhi Nation</a>
+    </div>
+    <div class="kawhi-container panel panel-default row" data-ng-controller="productListCrtl">
+        <div class="kawhi-nav col-sm-3">
+            <div class="btn btn-block btn-default btn-lg" data-ng-class="getClass(null)"
+                data-ng-click="selectCategory(null)">Home</div>
+            <div class="btn btn-block btn-default btn-lg" data-ng-click="selectCategory(item)"
+                data-ng-class="getClass(item)"
+                data-ng-repeat="item in data.products | orderBy:'category' |unique:'category'">
+                {{item}}
+            </div>
+        </div>
+        <div class="kawhi-content-container col-sm-9">
+            <div class="row">
+                <div class="products"
+                    data-ng-repeat="item in data.products | orderBy:'name' | filter:categoryFilterFn | range:recordPerPage:selectedPage">
+                    <div class="well products col-sm-5">
+                        <h3>
+                            {{item.name}}
+                            <span class="pull-right label label-primary">{{item.price | currency}}</span>
+                        </h3>
+                        <span class="lead">{{item.description}}</span>
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+            </div>
+            <div class="kawhi-pagination pull-right btn-group">
+                <a class="btn btn-default btn-lg" href="#" data-ng-class="getPageClass(page)"
+                    data-ng-click="selectPage(page)"
+                    data-ng-repeat="page in data.products | filter:categoryFilterFn | pageCount:recordPerPage">
+                    {{page}}
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
