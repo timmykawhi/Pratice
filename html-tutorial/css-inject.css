@@ -1,0 +1,7 @@
+/* @import url(./css-inject-1.css); */
+
+.test {
+    width: 10em;
+    height: 10em;
+    background: pink;
+}

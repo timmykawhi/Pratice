@@ -1,0 +1,125 @@
+#header {
+    height: 10em;
+    background: gray url(psb.jpg) repeat 0em -12em;
+    overflow: hidden;
+}
+
+#header img {
+    width: 5em;
+    height: 8em;
+}
+
+.four img {
+    margin-left: 2%;
+    padding: 4%;
+    background: white;
+    width: 40%;
+    height: 60%;
+    float: left;
+}
+
+.four ul {
+    margin-left: 2%;
+    float: left;
+    width: 40%;
+    padding: 4%;
+    color: brown;
+    overflow: hidden;
+}
+
+.four li {}
+
+#nav li {
+    background: gray;
+    float: left;
+    text-align: center;
+    width: 10%;
+    margin-left: 1%;
+}
+
+#nav a {
+    font-size: 1em;
+    font-family: '微软雅黑';
+    color: white;
+    display: block;
+    padding: 0.2em;
+}
+
+#nav a:visited {
+    color: purple;
+}
+
+#nav a:hover {
+    color: blue;
+    background: orange;
+}
+
+#main {}
+
+#lside {
+    width: 75%;
+    height: 40em;
+    background: pink;
+    overflow: hidden;
+}
+
+#rside {
+    width: 24%;
+    height: 40em;
+    background: orange;
+}
+
+.sub-title {
+    height: 6%;
+    background: yellowgreen;
+}
+
+.sub-title img {
+    height: 80%;
+    width: 10%;
+}
+
+.sub-title h1 {
+    margin: 0.5em;
+    font-size: 1em;
+    font-family: 'Microsoft Yahei', SimHei, sans-serif;
+}
+
+.sub-title a {
+    margin: 0.5em;
+    font-size: 1em;
+    font-family: 'Microsoft Yahei', SimHei, sans-serif;
+}
+
+.four h2 {
+    margin: 0.5em;
+    font-size: 1em;
+    font-family: 'Microsoft Yahei', SimHei, sans-serif;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.four {
+    width: 48%;
+    height: 46%;
+    margin: 1% 1% 1% 1%;
+    float: left;
+    background: url(psb.jpg)
+}
+
+.clr {
+    clear: both;
+    /* width: 0;
+    height: 0; */
+}
+
+#footer {
+    height: 5em;
+    background: blueviolet
+}

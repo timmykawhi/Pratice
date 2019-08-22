@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #test1 {
+            width: 100px;
+            height: 50px;
+            border: 1em solid blue;
+        }
+        
+        .test2 {
+            width: 200px;
+            height: 50px;
+            border: 1em solid pink;
+        }
+        
+        div {
+            width: 100px;
+            height: 100px;
+            background: orange;
+            margin: 10px;
+        }
+        
+        div p {
+            color: rebeccapurple;
+        }
+        
+        .test {
+            color: red;
+        }
+        
+        #testid {
+            color: black;
+        }
+        
+        div.priority #testid {
+            color: blue;
+        }
+        
+        div p#testid {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="test1"></div>
+    <div class="test2"></div>
+    <div>
+        <p>我是div标签中的p标签</p>
+    </div>
+    <p>我是独立p标签</p>
+
+    <div class="priority">
+        <p class="test" id="testid">
+            控制得越精细优先级越高
+        </p>
+    </div>
+</body>
+
+</html>

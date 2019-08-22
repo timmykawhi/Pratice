@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Box Model</title>
+    <style>
+        .container {
+            height: inherit;
+            width: 1000px;
+            background: white
+        }
+        
+        .container div {
+            background: cyan;
+            margin: 5%;
+            width: 40%;
+            height: 50%;
+            float: left
+        }
+        
+        .container .clear {
+            clear: both;
+            height: 50em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="clear"></div>
+    </div>
+</body>
+
+</html>
