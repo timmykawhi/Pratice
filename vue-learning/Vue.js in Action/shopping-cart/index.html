@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app" v-cloak>
+        <div v-if="list.length">
+            <table>
+                <thead>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Number</th>
+                    <th>Action</th>
+                </thead>
+                <tbody>
+                    <tr v-for="(item,index) in list">
+                        <td v-for="value in item">{{value}}</td>
+                        <td>
+                            <button @click="remove(index)">remove</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div>Total price is {{totalPrice}}.</div>
+        </div>
+        <div v-else>
+            The shopping list is empty.
+        </div>
+    </div>
+    <script src=" https://unpkg.com/vue/dist/vue.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
