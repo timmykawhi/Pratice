@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>first page</title>
+    <style>
+        body {
+            background-image: url('https://c1.hoopchina.com.cn/uploads/star/event/images/180702/bmiddle-b4893dc11a1e5ab21ce74769c336e277ea212579.png?x-oss-process=image/resize,w_800/format,webp');
+            background-repeat: no-repeat;
+            background-position: 100px 100px;
+            background-attachment: fixed;
+        }
+        
+        p {
+            margin: 1em;
+            background-color: rgba(50, 172, 172, 0.25);
+            white-space: pre-line;
+            direction: ltr;
+            font-family: 'Times New Roman', Times, serif;
+            /* font-family: serif sans-serif monospace cursive fantasy; */
+            /* 5大類 serif：矢量I H 竪綫兩邊有小橫杠 sans-serif 竪綫兩邊無小橫杠  monospace：等距字體 cursive：手寫 fantasy：其他 */
+            font-style: oblique;
+        }
+        
+        .p1 {
+            border: 1em solid blue;
+            font-style: italic;
+            font-variant: small-caps;
+            font-weight: bold;
+            font-size: 2em;
+            text-indent: 2em;
+            padding: 2em;
+            line-height: 1.5;
+            text-align: right;
+            /* justify兩端對齊 */
+            /* em 當前字體的倍數 */
+            word-spacing: 1em;
+            /* letter-spacing: 1em; */
+            text-transform: capitalize;
+            /* text-shadow: 10px 5px 5px rgb(0, 255, 0); */
+            text-shadow: 0px -1px 0px #000000, 0px 1px 3px #606060;
+            /* text-shadow: x y width rgb(0, 255, 0); */
+            /* text-decoration: overline underline line-through blink; */
+            outline-color: red;
+            outline-style: ridge;
+            outline-width: 0.1em;
+            color: blue;
+            width: 30%;
+            position: absolute;
+            left: -1em;
+            bottom: -1em;
+        }
+        
+        ul {
+            list-style-type: square;
+            /* list-style-image: url('a.jpg'); */
+            list-style-position: outside;
+        }
+        
+        table {
+            border: 1px solid blue;
+            border-collapse: collapse;
+            caption-side: bottom;
+            table-layout: auto;
+            /* table-layout: fixed; 固定列寬以第一行爲標準*/
+        }
+        
+        td {
+            padding: 0.2em;
+            vertical-align: top;
+            text-align: center;
+            width: 2em;
+            border: 1px solid blue;
+        }
+        .mask{
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 100%;
+            overflow: hidden;
+            background-color: rgba(122, 122, 122, 0.5);
+            z-index: 100;
+        }
+        .popup-modal-container{
+            position: absolute;
+            top: 150px;
+            right: 100px;
+            bottom: 100px;
+            left: 150px;
+            z-index: 150;
+            border-radius: 25px;
+            background-color: white;
+        }
+    </style>
+</head>
+<!-- background-color:#rrggbb -->
+<!-- background-color: rgb(255,255,255) -->
+<!-- background-color: rgba(255,255,255,0.5) a透明度-->
+
+<body>
+    <p>
+        other HHHHIII paragraph
+    </p>
+    <p class="p1"> Kawhi Leonard 如果新赛季开 始，打几场比赛后，卡证明了自己的健康，然后马刺就可以没什么顾虑直接给超级顶薪了。 这样，多年合同的健康卡，交易价值升至顶点，马刺绝对能换来更好的筹码。 即使卡不想为马刺打球，那么这样做对自己也只有好处。毕竟湖人又不是他亲舅，为什么非要帮湖人压价呢？ 所以，签了超顶后，要多久才能交易？
+    </p>
+    <ul>
+        <li>Kawhi Leonard 如果新赛季开 始，打几场比赛后，卡证明了自己的健康，然后马刺就可以没什么顾虑直接给超级顶薪了。 这样，多年合同的健康卡，交易价值升至顶点，马刺绝对能换来更好的筹码。 即使卡不想为马刺打球，那么这样做对自己也只有好处。毕竟湖人又不是他亲舅，为什么非要帮湖人压价呢？ 所以，签了超顶后，要多久才能交易？</li>
+        <li>B</li>
+        <li>C</li>
+    </ul>
+
+    <table>
+        <caption>table</caption>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+    </table>
+    <div class="mask">
+        <div class="popup-modal-container"></div>
+    </div>
+</body>
+
+</html>
