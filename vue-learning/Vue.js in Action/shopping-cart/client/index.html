@@ -22,9 +22,19 @@
                 </thead>
                 <tbody>
                     <tr v-for="(item,index) in list">
-                        <td v-for="value in item">{{value}}</td>
+                        <td v-for="(value,key) in item">
+                            <span v-if="key==='count'">
+                                <button @click="handleAdd(index)">+</button>
+                                <input type="number" min="1" step="1" v-model="item.count">
+                                <button @click="handleReduce(index)" :disabled="item.count <= 1">-</button>
+                                <input-number :min="0" :max="100" :decimal="0" v-model="item.count"></input-number>
+                            </span>
+                            <span v-else>
+                                {{value}}
+                            </span>
+                        </td>
                         <td>
-                            <button @click="remove(index)">remove</button>
+                            <button @click="handleRemove(index)">remove</button>
                         </td>
                     </tr>
                 </tbody>
@@ -36,6 +46,7 @@
         </div>
     </div>
     <script src=" https://unpkg.com/vue/dist/vue.min.js"></script>
+    <script src="./input-number/input-number.js"></script>
     <script src="index.js"></script>
 </body>
 
