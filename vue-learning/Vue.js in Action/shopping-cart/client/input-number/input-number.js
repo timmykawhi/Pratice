@@ -1,9 +1,10 @@
 Vue.component('input-number', {
     template: "\
     <div class='input-number'>\
-    <button @click='handleAdd'>+</button>\
-     <input type='text' :value='currentValue' @change='handleInputChange'>\
-    <button @click='handleReduce'>-</button>\
+    <button @click='handleAdd' :disabled='value >= max'>+</button>\
+     <input type='text' :value='currentValue' @change='handleInputChange'\
+     @keydown.up='handleAdd' @keydown.down='handleReduce'>\
+    <button @click='handleReduce' :disabled='value <= min'>-</button>\
     </div>",
     props: {
         max: {
