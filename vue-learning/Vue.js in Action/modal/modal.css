@@ -1,0 +1,84 @@
+[v-cloak] {
+    display: none;
+}
+
+.btn {
+    display: inline-block;
+    border-radius: 15px;
+    padding: 5px 15px;
+    border: 1px solid grey;
+    background: rgb(224, 245, 240);
+    cursor: pointer;
+    width: 60px;
+    text-align: center;
+    margin: 5px 5px;
+}
+
+.btn-primary {
+    background: rgb(73, 106, 216)
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-end {
+    justify-content: flex-end;
+}
+
+.flex-item-end {
+    align-self: flex-end
+}
+
+.flex-item {
+    flex: 1;
+}
+
+.flex-item-none {
+    flex: none;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-wrap {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(173, 172, 172, 0.678);
+}
+
+.modal-content {
+    padding: 16px 32px;
+    flex: none;
+    height: 80%;
+    width: 80%;
+    background: white;
+    border-radius: 15px;
+    max-width: 800px;
+}
+
+.modal-header {
+    align-items: baseline;
+    border-bottom: 2px solid black;
+}
+
+.modal-header-title {
+    font-weight: bold;
+}

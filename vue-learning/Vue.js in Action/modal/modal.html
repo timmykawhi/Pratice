@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./modal.css">
+    <title>Modal</title>
+</head>
+
+<body>
+    <div id="app" v-cloak>
+        <div class="edit-btn btn" @click="handleEditButtonClick">
+            Edit
+        </div>
+        <div class="modal-container" v-show='showModal'>
+            <div class="modal-wrap flex-center flex-row" @click.self="handleEditButtonClick">
+                <div class="modal-content">
+                    <div class="modal-header flex-row" @click="handleEditButtonClick">
+                        <div class="modal-header-title flex-item">Modal</div>
+                        <div class="cancel-btn btn flex-item-none">Cancel</div>
+                        <div class="save-btn btn btn-primary flex-item-none">Save</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src=" https://unpkg.com/vue/dist/vue.min.js"></script>
+    <script src="./modal.js"></script>
+</body>
+
+</html>

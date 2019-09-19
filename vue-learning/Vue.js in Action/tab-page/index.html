@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./index.css">
+    <title>Tab Demo</title>
+</head>
+
+<body>
+    <div id="app" v-cloak>
+        <tab>
+            <pane v-for="item in tabPageList" :name="item.name" :label="item.label">
+                {{item.content}}
+            </pane>
+        </tab>
+    </div>
+    <script src=" https://unpkg.com/vue/dist/vue.min.js"></script>
+
+    <script type="text/x-template" id="pane" src="./pane/pane.html">
+        <div class="pane">
+            <slot></slot>
+        </div>
+    </script>
+
+    <script src="./pane/pane.js"></script>
+
+    <script type="text/x-template" id="tab" src="./tab/tab.html">
+        <div class="tab">
+            <div class="tab-bar">
+                <div :class="tabClass(item.name)" v-for="item in navList" @click="handleTabClick(item.name)">
+                    {{item.label}}
+                </div>
+            </div>
+            <div class="tab-content">
+                <slot></slot>
+            </div>
+        </div>
+    </script>
+
+    <script src="./tab/tab.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
